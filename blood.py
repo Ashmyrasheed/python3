@@ -15,8 +15,9 @@ while True:
     print("4 update the blood banker")    
 
     print("5 delete a blood banker")
+    print("6average blood donated ")
 
-    print("6 exit")
+    print("7 exit")
 
    
 
@@ -113,5 +114,18 @@ while True:
 
 
     elif(choice==6):
+        
+        
 
+        print('average blood donated ')
+
+        sql = 'SELECT AVG(`litreofblood`) FROM `bloodbank` '
+
+        mycursor.execute(sql)
+
+        result = mycursor.fetchall()
+
+        print(result)
+        
+    elif(choice==7):
         break
