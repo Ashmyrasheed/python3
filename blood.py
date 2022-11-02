@@ -79,7 +79,23 @@ while True:
     elif(choice==4):
 
         print('update blood banker')
-
+        
+        
+        bloodgroup = input('enter the bloodgroup')
+        
+        nameofdonar = input('enter the name')
+        phno = input('enter the phno')
+        bloodgroup = input('enter the bloodgroup')
+        litreofblood = input('enter the litrofblood')
+   
+    
+        
+        sql = "UPDATE `bloodbank` SET `nameofdonar`='"+nameofdonar+"',`phno`='"+phno+"',`bloodgroup`='"+bloodgroup+"',`litreofblood`='"+litreofblood+"' WHERE `bloodgroup`='"+bloodgroup+"'"
+    
+        mycursor.execute(sql)
+        mydb.commit()
+        print("data updated succesfully")
+    
     elif(choice==5):
 
         print('delete blood banker')
