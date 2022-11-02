@@ -65,6 +65,16 @@ while True:
     elif(choice==3):
 
         print('search blood banker')
+        
+        bloodgroup = input('enter blood group')
+        
+        sql = "SELECT `id`,`nameofdonar`,`phno`,`bloodgroup`,`litreofblood` FROM `bloodbank` WHERE `bloodgroup` = '"+bloodgroup+"'"
+
+        mycursor.execute(sql)
+
+        result = mycursor.fetchall()
+
+        print(result)
 
     elif(choice==4):
 
