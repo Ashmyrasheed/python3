@@ -15,9 +15,10 @@ while True:
     print("4 update the blood banker")    
 
     print("5 delete a blood banker")
-    print("6average blood donated ")
+    print("6 average blood donated ")
+    print("7 Name of the doner with starting letter")
 
-    print("7 exit")
+    print("8 exit")
 
    
 
@@ -127,5 +128,19 @@ while True:
 
         print(result)
         
-    elif(choice==7):
+    elif(choice == 7):
+
+        print('Name of the doner with starting letter')
+
+        a = input('Enter the first letter of the name of the donar : ')
+
+        sql = "SELECT `id`, `nameofdonar`, `phno`, `bloodgroup`, `litreofblood` FROM `bloodbank` WHERE `nameofdonar` LIKE '%"+a+"%'"
+
+        mycursor.execute(sql)
+
+        result = mycursor.fetchall()
+
+        print(result)
+        
+    elif(choice==8):
         break
