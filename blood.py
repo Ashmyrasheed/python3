@@ -54,7 +54,14 @@ while True:
     elif(choice==2):
 
         print('view blood banker')
+        
+        sql = 'SELECT * FROM `bloodbank`'
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        for i in result:
+            print(i)
 
+        print('view book')
     elif(choice==3):
 
         print('search blood banker')
